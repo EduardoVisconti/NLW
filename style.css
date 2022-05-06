@@ -302,7 +302,13 @@ body.menu-expanded button path {
   margin-bottom: 6rem;
 }
 
-#service .card {
+#services .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#services .card {
   padding: 2.4rem;
   text-align: left;
 
@@ -312,6 +318,6 @@ body.menu-expanded button path {
   border-radius: 0.6rem;
 }
 
-#service .card h3 {
+#services .card h3 {
   margin-block: 1.6rem;
 }
