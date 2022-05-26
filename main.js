@@ -4,7 +4,10 @@ function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
 
-  activateMenuAtCurrentSection()
+  activateMenuAtCurrentSection(home)
+  activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(about)
+  activateMenuAtCurrentSection(contact)
 }
 
 function activateMenuAtCurrentSection(section) {
@@ -35,8 +38,24 @@ function activateMenuAtCurrentSection(section) {
   // a seção termina onde?
   const sectionEndsAt = sectionTop + sectionHeight
 
-  // o final da seção passou da
-  const sectionEndPassedTargetLine = 
+  // o final da seção passou da linha alvo
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
+
+  console.log(' O fundo da seção passou da linha?', sectionEndPassedTargetLine)
+
+  // limite da seção
+  const sectionBoundaries =
+    sectionTopReachOrPassedTargetLine &&
+    !sectionEndPassedTargetLine
+
+  const sectionId = section.getAttribute('id')
+  const menuElement = document
+  .querySelector(`.menu a[href*=${sectionId}]`)
+
+  menuElement.classList.remove('active')
+  if (sectionBoundaries) {
+    console.log('Estou na seção HOME')
+  }
 }
 
 function showNavOnScroll() {
