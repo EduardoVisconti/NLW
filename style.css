@@ -336,7 +336,7 @@ body.menu-expanded button path {
   background-color: var(--brand-beige);
   border: 1px solid var(--brand-light);
   border-radius: 0.6rem;
-
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -381,6 +381,34 @@ body.menu-expanded button path {
 
 #services .card h3 {
   margin-block: 1.6rem;
+}
+
+/*=== REVIEWS =================================*/
+
+#reviews header h2 {
+  font-size: 3.5rem;
+  margin-bottom: 6rem; /* tirar dps */
+}
+
+#reviews .brands h3 {
+  font-size: 2.4rem;
+
+}
+
+#reviews .logos {
+  margin-top: 4.8rem;
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+}
+
+#reviews .logos svg {
+  width: 14rem;
+  height: 3.3rem;
 }
 
 /*=== ABOUT =================================*/
