@@ -188,6 +188,11 @@ nav button {
   cursor: pointer;
 }
 
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
 /*=== MENU-EXPANDED =================================*/
 body.menu-expanded {
   overflow: hidden;
@@ -476,7 +481,7 @@ footer .social-links {
   body {
     overflow: auto;
   }
-  
+
   .wrapper {
     width: min(112rem, 100%); /* Pega 112rem ou 100%  */
     display: grid;
@@ -695,7 +700,7 @@ footer .social-links {
   }
 
   #services .card {
-    width:  30%;
+    width: 30%;
     flex-grow: 1;
   }
 
@@ -729,7 +734,7 @@ footer .social-links {
   footer {
     padding-block: 8rem;
   }
-  
+
   footer .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 'A B';
