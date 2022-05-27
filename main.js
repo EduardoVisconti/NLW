@@ -1,5 +1,6 @@
 window.addEventListener('scroll', onScroll)
 
+onscroll()
 function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()
@@ -45,16 +46,14 @@ function activateMenuAtCurrentSection(section) {
 
   // limite da seção
   const sectionBoundaries =
-    sectionTopReachOrPassedTargetLine &&
-    !sectionEndPassedTargetLine
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
 
   const sectionId = section.getAttribute('id')
-  const menuElement = document
-  .querySelector(`.menu a[href*=${sectionId}]`)
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
 
   menuElement.classList.remove('active')
   if (sectionBoundaries) {
-    console.log('Estou na seção HOME')
+    menuElement.classList.add('active')
   }
 }
 
@@ -67,7 +66,7 @@ function showNavOnScroll() {
 }
 
 function showBackToTopButtonOnScroll() {
-  if (scrollY > 500) {
+  if (scrollY > 550) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
