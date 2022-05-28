@@ -1,6 +1,6 @@
 window.addEventListener('scroll', onScroll)
+/* Uncaught TypeError: Cannot read properties of undefined (reading 'add') */
 
-onscroll()
 function onScroll() {
   showNavOnScroll()
   showBackToTopButtonOnScroll()

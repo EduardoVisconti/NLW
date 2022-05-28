@@ -420,23 +420,25 @@ body.menu-expanded button path {
 }
 
 /*=== BANNER =================================*/
-
-#banner {
+#banner .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5rem;
 
-  border-radius: 5%;
+  border-radius: 2rem;
 
-  height: 31rem;
-  margin-inline: 5rem;
+  height: 30rem;
+  width: 90%;
   background-color: var(--primary-color);
 }
 
 #banner h2 {
   color: white;
+  font-size: 4rem;
+  width: 47rem;
+  margin-inline: auto;
 }
 
 #banner .button {
@@ -444,10 +446,20 @@ body.menu-expanded button path {
   color: var(--primary-color);
 
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 #banner a.button path {
   fill: var(--primary-color);
+}
+
+#banner a.button:hover {
+  background-color: var(--brand-dark);
+  color: white;
+}
+
+#banner a.button:hover path {
+  fill: white;
 }
 
 /*=== ABOUT =================================*/
@@ -753,7 +765,7 @@ footer .social-links {
 
   /*=== SERVICES =================================*/
   #services h2 {
-    width: 47rem;
+    width: 48rem;
     margin-inline: auto;
   }
 
@@ -766,6 +778,14 @@ footer .social-links {
   #services .card {
     width: 30%;
     flex-grow: 1;
+  }
+
+  /*=== BANNER =================================*/
+  #banner .wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-radius: 5rem;
   }
 
   /*=== ABOUT =================================*/
