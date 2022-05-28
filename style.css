@@ -411,6 +411,45 @@ body.menu-expanded button path {
   height: 3.3rem;
 }
 
+#reviews .logos path {
+  fill: var(--primary-color);
+}
+
+#reviews .logos .linkedin-logo path:nth-child(4) {
+  fill: white;
+}
+
+/*=== BANNER =================================*/
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  border-radius: 5%;
+
+  height: 31rem;
+  margin-inline: 5rem;
+  background-color: var(--primary-color);
+}
+
+#banner h2 {
+  color: white;
+}
+
+#banner .button {
+  background-color: white;
+  color: var(--primary-color);
+
+  margin-bottom: 2rem;
+}
+
+#banner a.button path {
+  fill: var(--primary-color);
+}
+
 /*=== ABOUT =================================*/
 #about {
   text-align: left;
