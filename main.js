@@ -1,8 +1,8 @@
 window.addEventListener('scroll', onScroll)
 /* Uncaught TypeError: Cannot read properties of undefined (reading 'add') */
-
+onScroll()
 function onScroll() {
-  showNavOnScroll()
+  /* showNavOnScroll()                    */
   showBackToTopButtonOnScroll()
 
   activateMenuAtCurrentSection(home)
@@ -51,19 +51,20 @@ function activateMenuAtCurrentSection(section) {
   const sectionId = section.getAttribute('id')
   const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
 
-  menuElement.classList.remove('active')
   if (sectionBoundaries) {
     menuElement.classList.add('active')
+  } else {
+    menuElement.classList.remove('active')
   }
 }
 
-function showNavOnScroll() {
+/* function showNavOnScroll() {     HAVE TO FIX
   if (scrollY > 0) {
-    navigation.classList.add('scroll')
+    navigation.classList.add('scroll');
   } else {
-    navigation.classList.remove('scroll')
+    navigation.classList.remove('scroll');
   }
-}
+}*/
 
 function showBackToTopButtonOnScroll() {
   if (scrollY > 550) {
